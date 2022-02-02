@@ -1,6 +1,6 @@
 function enter() {
-    var mail = document.getElementById("mail-inp").value;
-    var password = document.getElementById("password-inp").value;
+    var mail = document.getElementById("loginuser").value;
+    var password = document.getElementById("loginpassword").value;
 
     console.log("Yeeah");
 
