@@ -170,7 +170,6 @@ textarea {
     -moz-webkit-border-radius: 0;
     -ms-webkit-border-radius: 0;
     -o-webkit-border-radius: 0;
-    webkit-border-radius: 0;
     border-radius: 0;
     display: block;
     outline: none;
@@ -187,7 +186,6 @@ input[type="submit"] {
     -moz-webkit-border-radius: 0;
     -ms-webkit-border-radius: 0;
     -o-webkit-border-radius: 0;
-    webkit-border-radius: 0;
     border-radius: 0;
     border: 0;
 }
@@ -797,8 +795,8 @@ div.k-window-content {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     -ms-touch-action: pan-x pan-y;
+    touch-action: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    -ms-scroll-snap-type: proximity;
 }
 .k-hr {
     margin: 0.5em auto;
@@ -821,7 +819,6 @@ div.k-window-content {
     vertical-align: middle;
     background-image: none;
     font: 16px/1 WebComponentsIcons;
-    speak: none;
     font-variant: normal;
     text-transform: none;
     text-indent: 0;
@@ -845,7 +842,6 @@ div.k-window-content {
     vertical-align: middle;
     background-image: none;
     font: 16px/1 WebComponentsIcons;
-    speak: none;
     font-variant: normal;
     text-transform: none;
     text-indent: 0;
@@ -2534,9 +2530,11 @@ div.k-grid-header {
     min-height: 0;
 }
 .k-mobile .k-grid tbody {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 .k-mobile .k-grid-backface tbody {
+    backface-visibility: hidden;
     -webkit-backface-visibility: visible;
 }
 .k-grid-content-expander {
@@ -2826,7 +2824,6 @@ form.k-filter-menu .k-textbox {
 }
 .k-dirty-cell:before {
     content: "\a0";
-    display: inline-block;
     width: 0;
     float: left;
 }
@@ -4329,6 +4326,7 @@ span.k-datetimepicker .k-select + .k-select {
     line-height: 2em;
     vertical-align: middle;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
     text-align: center;
     width: 2em;
     height: 100%;
@@ -4601,7 +4599,6 @@ span.k-numerictextbox {
     display: block;
     height: 1em;
     line-height: 1em;
-    vertical-align: middle;
     border-width: 0;
     padding: 0;
     overflow: hidden;
@@ -4708,6 +4705,7 @@ span.k-numerictextbox {
 .k-listbox .k-list-scroller li {
     cursor: default;
     -moz-user-select: none;
+    user-select: none;
     -ms-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -5109,6 +5107,7 @@ div.k-dropdowngrid-popup .k-group-header {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    touch-action: pinch-zoom double-tap-zoom;
     -ms-touch-action: pinch-zoom double-tap-zoom;
 }
 .k-flatcolorpicker .k-hsv-rectangle .k-draghandle {
@@ -7123,7 +7122,6 @@ span.k-tooltip {
 .k-toolbar {
     position: relative;
     display: block;
-    vertical-align: middle;
     padding: 0.28571428em 0;
     overflow: hidden;
     min-height: 2.4375em;
@@ -8211,6 +8209,7 @@ span.k-sparkline {
 .k-selector {
     position: absolute;
     -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .k-selection {
     position: absolute;
@@ -8983,6 +8982,7 @@ span.k-sparkline {
     user-select: none;
     -webkit-margin-collapse: separate;
     -webkit-transform: translatez(0);
+    transform: translateZ(0);
 }
 .k-widget .km-scroll-wrapper {
     position: relative;
@@ -11677,10 +11677,8 @@ span.k-sparkline {
     width: 1em;
     height: 1em;
     text-align: center;
-    vertical-align: middle;
     background-image: none;
     font: 16px/1 WebComponentsIcons;
-    speak: none;
     font-variant: normal;
     text-transform: none;
     text-indent: 0;
@@ -22262,7 +22260,6 @@ input[type="radio"] {
     -moz-webkit-border-radius: 0;
     -ms-webkit-border-radius: 0;
     -o-webkit-border-radius: 0;
-    webkit-border-radius: 0;
     border-radius: 0;
     display: inline-block;
     margin: 0 5px 0 0;
@@ -22285,7 +22282,6 @@ input[type="checkbox"] {
     -moz-webkit-border-radius: 2px !important;
     -ms-webkit-border-radius: 2px !important;
     -o-webkit-border-radius: 2px !important;
-    webkit-border-radius: 2px !important;
     border-radius: 2px !important;
     border-color: #999 !important;
     background-color: #fff !important;
@@ -22365,7 +22361,6 @@ button,
     -moz-webkit-border-radius: 5px;
     -ms-webkit-border-radius: 5px;
     -o-webkit-border-radius: 5px;
-    webkit-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer;
     color: #333;
@@ -22451,7 +22446,6 @@ fieldset.visible {
     -moz-webkit-border-radius: 5px;
     -ms-webkit-border-radius: 5px;
     -o-webkit-border-radius: 5px;
-    webkit-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid #c8c8c8;
     padding: 1em;
@@ -22745,7 +22739,6 @@ span.ab-confirm {
     -moz-webkit-border-radius: 3px;
     -ms-webkit-border-radius: 3px;
     -o-webkit-border-radius: 3px;
-    webkit-border-radius: 3px;
     border-radius: 3px;
     padding: 0 6px !important;
     font-size: 11px;
@@ -22791,7 +22784,6 @@ span.ab-confirm {
     -moz-webkit-border-radius: 0;
     -ms-webkit-border-radius: 0;
     -o-webkit-border-radius: 0;
-    webkit-border-radius: 0;
     border-radius: 0;
     color: #333;
     font-weight: 500;
@@ -22846,7 +22838,6 @@ table.form-elements > tbody > tr:last-child > td {
     -moz-webkit-border-radius: 5px;
     -ms-webkit-border-radius: 5px;
     -o-webkit-border-radius: 5px;
-    webkit-border-radius: 5px;
     border-radius: 5px;
     background-color: #f0f0f0;
     padding: 1em;
